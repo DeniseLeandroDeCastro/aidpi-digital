@@ -131,4 +131,7 @@ val SoreThroatCardBackground = Color(0xFFD6F4DE)
 val ResultNoteBackground = Color(0xFFEAF3FF)
 val ResultNoteBorder = Color(0xFFB8D6FF)
 val ResultNoteText = Color(0xFF175CD3)
+val ResultButtonBlue = Color(0xFF1769E0)
+val ResultButtonBluePressed = Color(0xFF1257BD)
+val ResultButtonContent = Color(0xFFFFFFFF)
 

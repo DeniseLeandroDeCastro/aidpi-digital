@@ -1,7 +1,12 @@
 package br.com.denisecastro.aidpidigital.ui.assessment.screen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
@@ -16,7 +21,6 @@ import br.com.denisecastro.aidpidigital.ui.assessment.result.cards.ResultDiagnos
 import br.com.denisecastro.aidpidigital.ui.assessment.result.cards.ResultVitalsCard
 import br.com.denisecastro.aidpidigital.ui.assessment.result.header.ResultHeader
 import br.com.denisecastro.aidpidigital.ui.assessment.result.note.ResultClinicalNote
-
 import br.com.denisecastro.aidpidigital.ui.theme.AidpiDigitalTheme
 import br.com.denisecastro.aidpidigital.ui.theme.ResultBackground
 
@@ -68,12 +72,7 @@ fun AssessmentResultScreen(
     }
 }
 
-@Preview(
-    name = "Resultado da Avaliação",
-    showSystemUi = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(name = "Resultado da Avaliação", showSystemUi = true)
 @Composable
 private fun AssessmentResultScreenPreview() {
     AidpiDigitalTheme {
