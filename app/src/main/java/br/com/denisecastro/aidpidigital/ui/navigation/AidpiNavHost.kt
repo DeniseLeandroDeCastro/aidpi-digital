@@ -9,6 +9,9 @@ import androidx.navigation.compose.rememberNavController
 import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsQuestionScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.WheezingQuestionScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.WheezingResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.viewmodel.AssessmentViewModel
 import br.com.denisecastro.aidpidigital.ui.home.screen.HomeScreen
 
@@ -50,13 +53,65 @@ fun AidpiNavHost(
                         navController.navigate(
                             Screen.AssessmentResult.route
                         )
+                    } else {
+                        navController.navigate(
+                            Screen.WheezingQuestion.route
+                        )
                     }
+                }
+            )
+        }
+
+        composable(Screen.WheezingQuestion.route) {
+            WheezingQuestionScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onAnswerSelected = { answer ->
+                    assessmentViewModel.selectWheezingAnswer(answer)
+
+                    if (answer) {
+                        navController.navigate(
+                            Screen.WheezingResult.route
+                        )
+                    } else {
+                        navController.navigate(
+                            Screen.RespiratorySignsQuestion.route
+                        )
+                    }
+                }
+            )
+        }
+
+        composable(Screen.RespiratorySignsQuestion.route) {
+            RespiratorySignsQuestionScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onAnswerSelected = { _ ->
+                    // Próxima etapa do fluxo ainda não implementada.
                 }
             )
         }
 
         composable(Screen.AssessmentResult.route) {
             AssessmentResultScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNewAssessment = {
+                    assessmentViewModel.resetAssessment()
+
+                    navController.popBackStack(
+                        route = Screen.Home.route,
+                        inclusive = false
+                    )
+                }
+            )
+        }
+
+        composable(Screen.WheezingResult.route) {
+            WheezingResultScreen(
                 onBack = {
                     navController.popBackStack()
                 },

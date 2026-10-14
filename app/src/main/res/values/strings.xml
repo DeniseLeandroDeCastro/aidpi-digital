@@ -68,6 +68,33 @@
     <string name="complaint_ear_pain">Problema de ouvido</string>
     <string name="complaint_sore_throat">Problema de garganta</string>
 
+    <string name="wheezing_question">A criança apresenta sibilância (chiado no peito)?</string>
+    <string name="wheezing_guidance">Se houver chiado, avalie primeiro a sibilância</string>
+    <string name="wheezing_answer_yes">Sim, apresenta sibilância</string>
+    <string name="wheezing_answer_yes_description">Avaliar pelo fluxograma de Sibilância</string>
+    <string name="wheezing_answer_no">Não apresenta sibilância</string>
+
+
+    <!-- Resultado da avaliação: Sibilância -->
+
+    <string name="wheezing_result_warning_title">AVALIAR SIBILÂNCIA</string>
+    <string name="wheezing_result_warning_description">Criança apresenta chiado. Usar o fluxograma específico de Sibilância.</string>
+
+    <string name="wheezing_result_diagnoses_title">Possíveis Diagnósticos</string>
+    <string name="wheezing_result_diagnosis">Sibilância / Chiado no peito</string>
+
+    <string name="wheezing_result_recommendations_title">Condutas Recomendadas</string>
+    <string name="wheezing_result_recommendation_1">Redirecionar para avaliação de SIBILÂNCIA</string>
+    <string name="wheezing_result_recommendation_2">Avaliar gravidade do chiado</string>
+    <string name="wheezing_result_recommendation_3">Verificar saturação de oxigênio</string>
+    <string name="wheezing_result_recommendation_4">Observar padrão respiratório</string>
+
+    <string name="wheezing_result_note_title">Nota Clínica</string>
+    <string name="wheezing_result_note_description">Quando há sibilância, ela deve ser avaliada e tratada antes de classificar a tosse.</string>
+
+    <string name="respiratory_signs_question">Presença de tiragem subcostal ou estridor em repouso?</string>
+    <string name="respiratory_signs_answer_yes">Sim, apresenta tiragem subcostal ou estridor em repouso</string>
+    <string name="respiratory_signs_answer_no">Não apresenta esses sinais</string>
 
 
 </resources>

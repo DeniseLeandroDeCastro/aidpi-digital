@@ -17,6 +17,12 @@ class AssessmentViewModel : ViewModel() {
         )
     }
 
+    fun selectWheezingAnswer(answer: Boolean) {
+        _uiState.value = _uiState.value.copy(
+            wheezingAnswer = answer
+        )
+    }
+
     fun resetAssessment() {
         _uiState.value = AssessmentUiState()
     }

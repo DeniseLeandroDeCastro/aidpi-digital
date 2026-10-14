@@ -96,11 +96,7 @@ fun AssessmentHeader(
     }
 }
 
-@Preview(
-    showSystemUi = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(showSystemUi = true)
 @Composable
 private fun AssessmentHeaderPreview() {
     AidpiDigitalTheme {

@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.denisecastro.aidpidigital.ui.assessment.result.alert.ResultAlertsCard
 import br.com.denisecastro.aidpidigital.ui.assessment.result.banner.ResultDangerBanner
-import br.com.denisecastro.aidpidigital.ui.assessment.result.buttons.ResultNewAssessmentButton
+import br.com.denisecastro.aidpidigital.ui.assessment.result.buttons.PrimaryButton
 import br.com.denisecastro.aidpidigital.ui.assessment.result.cards.ResultConductCard
 import br.com.denisecastro.aidpidigital.ui.assessment.result.cards.ResultDiagnosesCard
 import br.com.denisecastro.aidpidigital.ui.assessment.result.cards.ResultVitalsCard
@@ -63,7 +63,7 @@ fun AssessmentResultScreen(
             ResultClinicalNote()
 
             Spacer(Modifier.height(18.dp))
-            ResultNewAssessmentButton(
+            PrimaryButton(
                 onClick = onNewAssessment
             )
 

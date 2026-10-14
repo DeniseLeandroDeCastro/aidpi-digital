@@ -25,7 +25,7 @@ import br.com.denisecastro.aidpidigital.ui.theme.ResultButtonBlue
 import br.com.denisecastro.aidpidigital.ui.theme.ResultButtonContent
 
 @Composable
-fun ResultNewAssessmentButton(
+fun PrimaryButton(
     onClick: () -> Unit,
     isLoading: Boolean = false
 ) {
@@ -73,9 +73,9 @@ fun ResultNewAssessmentButton(
 
 @Preview(name = "Botão Nova Avaliação", showSystemUi = true)
 @Composable
-private fun ResultNewAssessmentButtonPreview() {
+private fun PrimaryButtonPreview() {
     AidpiDigitalTheme {
-        ResultNewAssessmentButton(
+        PrimaryButton(
             onClick = {}
         )
     }
@@ -83,9 +83,9 @@ private fun ResultNewAssessmentButtonPreview() {
 
 @Preview(name = "Botão em carregamento", showBackground = true)
 @Composable
-private fun ResultNewAssessmentButtonLoadingPreview() {
+private fun PrimaryButtonLoadingPreview() {
     AidpiDigitalTheme {
-        ResultNewAssessmentButton(
+        PrimaryButton(
             onClick = {},
             isLoading = true
         )

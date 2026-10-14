@@ -135,3 +135,8 @@ val ResultButtonBlue = Color(0xFF1769E0)
 val ResultButtonBluePressed = Color(0xFF1257BD)
 val ResultButtonContent = Color(0xFFFFFFFF)
 
+val WheezingBackground = Color(0xFFF2F7FF)
+val WheezingCardBorder = Color(0xFFE0E5EC)
+val WheezingProgressTrack = Color(0xFFE1E5EB)
+val WheezingArrow = Color(0xFF94A3B8)
+
