@@ -1,3 +1,73 @@
 <resources>
     <string name="app_name">AidpiDigital</string>
+
+    <string name="assessment_cough_title">Tosse ou Dificuldade para Respirar</string>
+    <string name="assessment_progress">Pergunta %1$d de %2$d</string>
+    <string name="assessment_danger_question">A criança apresenta SINAIS GERAIS DE PERIGO?</string>
+    <string name="assessment_danger_description">Não consegue beber/mamar? Vomita tudo? Teve convulsões? Está letárgica/inconsciente? Enchimento capilar &gt;2s? Batimento de asa do nariz ou gemência?</string>
+    <string name="assessment_answer_yes">Sim, apresenta pelo menos 1 sinal de perigo</string>
+    <string name="assessment_answer_no">Não apresenta sinais gerais de perigo</string>
+    <string name="assessment_child_description">Criança pensando, com ponto de interrogação</string>
+    <string name="assessment_back_description">Voltar</string>
+
+    <string name="assessment_back_symbol">‹</string>
+    <string name="assessment_next_symbol">›</string>
+    <string name="assessment_danger_symbol">!</string>
+    <string name="assessment_success_symbol">✓</string>
+
+
+    <!-- Resultado da avaliação -->
+    <string name="result_header_title">Resultado da Avaliação</string>
+
+    <string name="result_danger_title">⚠ DOENÇA MUITO GRAVE</string>
+    <string name="result_danger_description">Presença de sinais gerais de perigo. REFERÊNCIA URGENTE necessária.</string>
+
+    <string name="result_diagnoses_title">Possíveis Diagnósticos</string>
+    <string name="result_diagnosis_1">Doença Muito Grave</string>
+    <string name="result_diagnosis_2">Pneumonia Grave</string>
+    <string name="result_diagnosis_3">Sepse</string>
+    <string name="result_diagnosis_4">Meningite</string>
+
+    <string name="result_conduct_title">Condutas Recomendadas</string>
+    <string name="result_conduct_1">Administrar 1ª dose de antibiótico IM (Penicilina Procaína ou Gentamicina)</string>
+    <string name="result_conduct_2">Tratar febre se temperatura ≥ 38°C (Paracetamol)</string>
+    <string name="result_conduct_3">Prevenir hipoglicemia: oferecer leite materno ou solução glicosada</string>
+    <string name="result_conduct_4">Manter criança aquecida</string>
+    <string name="result_conduct_5">REFERIR URGENTEMENTE ao hospital</string>
+    <string name="result_conduct_6">Acompanhar durante transporte se possível</string>
+
+    <string name="result_vitals_title">Sinais Vitais a Monitorar</string>
+    <string name="result_vital_temperature">Temperatura</string>
+    <string name="result_vital_rr">FR</string>
+    <string name="result_vital_hr">FC</string>
+    <string name="result_vital_spo2">SaO₂</string>
+    <string name="result_vital_capillary">Enchimento capilar</string>
+    <string name="result_vital_consciousness">Nível de consciência</string>
+
+    <string name="result_alert_title">⚠ Sinais de Alerta</string>
+    <string name="result_alert_1">• Piora do nível de consciência</string>
+    <string name="result_alert_2">• Incapacidade de mamar/beber</string>
+    <string name="result_alert_3">• Convulsões</string>
+    <string name="result_alert_4">• Cianose</string>
+    <string name="result_alert_5">• Apneia</string>
+
+    <string name="result_note_title">ⓘ Nota Clínica</string>
+    <string name="result_note_description">EMERGÊNCIA PEDIÁTRICA. Não retardar referência. A presença de qualquer sinal geral de perigo indica risco de morte.</string>
+
+    <string name="result_new_assessment">Nova Avaliação</string>
+
+    <!-- Home - Queixas principais -->
+    <string name="home_complaint_title">Selecione a queixa principal</string>
+    <string name="home_complaint_description">Toque em uma das opções abaixo para iniciar a avaliação.</string>
+
+    <!-- Queixas principais -->
+    <string name="complaint_cough">Tosse ou dificuldade para respirar</string>
+    <string name="complaint_wheezing">Sibilância ou chiado no peito</string>
+    <string name="complaint_diarrhea">Diarreia</string>
+    <string name="complaint_fever">Febre</string>
+    <string name="complaint_ear_pain">Problema de ouvido</string>
+    <string name="complaint_sore_throat">Problema de garganta</string>
+
+
+
 </resources>
