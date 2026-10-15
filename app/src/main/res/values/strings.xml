@@ -96,5 +96,28 @@
     <string name="respiratory_signs_answer_yes">Sim, apresenta tiragem subcostal ou estridor em repouso</string>
     <string name="respiratory_signs_answer_no">Não apresenta esses sinais</string>
 
+    <!-- Resultado da Pergunta 3 -->
+
+    <string name="respiratory_result_danger_title">⚠ PNEUMONIA GRAVE ou DOENÇA MUITO GRAVE</string>
+    <string name="respiratory_result_danger_description">Tiragem subcostal ou estridor em repouso. REFERÊNCIA URGENTE.</string>
+
+    <string name="respiratory_result_diagnosis_1">Pneumonia Grave</string>
+    <string name="respiratory_result_diagnosis_2">Bronquiolite Grave</string>
+    <string name="respiratory_result_diagnosis_3">Insuficiência Respiratória</string>
+
+    <string name="respiratory_result_conduct_1">Antibioticoterapia inicial: verificar indicação, medicamento e dose no protocolo AIDPI vigente.</string>
+    <string name="respiratory_result_conduct_2">Tratar febre se ≥ 38°C</string>
+    <string name="respiratory_result_conduct_3">Prevenir hipoglicemia</string>
+    <string name="respiratory_result_conduct_4">Oxigênio se disponível</string>
+    <string name="respiratory_result_conduct_5">REFERIR URGENTEMENTE ao hospital</string>
+    <string name="respiratory_result_conduct_6">Não alimentar durante transporte (risco de aspiração)</string>
+
+    <string name="respiratory_result_alert_1">• Cianose central</string>
+    <string name="respiratory_result_alert_2">• SatO₂ &lt; 90%</string>
+    <string name="respiratory_result_alert_3">• Incapacidade de beber</string>
+    <string name="respiratory_result_alert_4">• Gemência</string>
+    <string name="respiratory_result_alert_5">• Batimento de asa nasal</string>
+
+    <string name="respiratory_result_note_description">Tiragem subcostal = retração da parede torácica inferior durante inspiração. Estridor em repouso indica obstrução grave de vias aéreas.</string>
 
 </resources>

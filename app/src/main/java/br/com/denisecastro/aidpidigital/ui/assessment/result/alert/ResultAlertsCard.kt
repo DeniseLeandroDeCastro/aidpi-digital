@@ -59,11 +59,7 @@ fun ResultAlertsCard() {
     }
 }
 
-@Preview(
-    showSystemUi = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(showSystemUi = true)
 @Composable
 private fun ResultAlertsCardPreview() {
     AidpiDigitalTheme {

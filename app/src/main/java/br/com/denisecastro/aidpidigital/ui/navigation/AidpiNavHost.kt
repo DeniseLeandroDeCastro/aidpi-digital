@@ -10,6 +10,7 @@ import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsQuestionScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.WheezingQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.WheezingResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.viewmodel.AssessmentViewModel
@@ -88,8 +89,13 @@ fun AidpiNavHost(
                 onBack = {
                     navController.popBackStack()
                 },
-                onAnswerSelected = { _ ->
-                    // Próxima etapa do fluxo ainda não implementada.
+                onAnswerSelected = { answer ->
+                    if (answer) {
+                        navController.navigate(
+                            Screen.RespiratorySignsResult.route
+                        )
+                    }
+                    // Resposta Não: aguardando a Pergunta 4.
                 }
             )
         }
@@ -112,6 +118,22 @@ fun AidpiNavHost(
 
         composable(Screen.WheezingResult.route) {
             WheezingResultScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNewAssessment = {
+                    assessmentViewModel.resetAssessment()
+
+                    navController.popBackStack(
+                        route = Screen.Home.route,
+                        inclusive = false
+                    )
+                }
+            )
+        }
+
+        composable(Screen.RespiratorySignsResult.route) {
+            RespiratorySignsResultScreen(
                 onBack = {
                     navController.popBackStack()
                 },

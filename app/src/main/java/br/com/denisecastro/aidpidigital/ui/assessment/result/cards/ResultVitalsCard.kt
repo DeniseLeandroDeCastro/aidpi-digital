@@ -61,11 +61,7 @@ private fun ResultVitalChip(
     )
 }
 
-@Preview(
-    showSystemUi = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(showSystemUi = true)
 @Composable
 private fun ResultVitalsCardPreview() {
     AidpiDigitalTheme {

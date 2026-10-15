@@ -209,12 +209,9 @@ private fun RespiratorySignsQuestionContent() {
                     .height(230.dp)
             ) {
                 Image(
-                    painter = painterResource(
-                        R.drawable.assessment_child
-                    ),
+                    painter = painterResource(R.drawable.assessment_child),
                     contentDescription = stringResource(
-                        R.string.assessment_child_description
-                    ),
+                        R.string.assessment_child_description),
                     contentScale = ContentScale.Fit,
                     modifier = Modifier
                         .align(Alignment.TopEnd)

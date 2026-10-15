@@ -48,11 +48,7 @@ fun ResultDangerBanner() {
     }
 }
 
-@Preview(
-    showBackground = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(showBackground = true)
 @Composable
 private fun ResultDangerBannerPreview() {
     AidpiDigitalTheme {
