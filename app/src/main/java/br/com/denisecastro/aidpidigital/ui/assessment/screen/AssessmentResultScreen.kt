@@ -63,9 +63,7 @@ fun AssessmentResultScreen(
             ResultClinicalNote()
 
             Spacer(Modifier.height(18.dp))
-            PrimaryButton(
-                onClick = onNewAssessment
-            )
+            PrimaryButton(onClick = onNewAssessment)
 
             Spacer(Modifier.height(22.dp))
         }

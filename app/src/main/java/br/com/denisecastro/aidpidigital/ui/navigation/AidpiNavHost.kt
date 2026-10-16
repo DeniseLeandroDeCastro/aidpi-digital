@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.ChildAgeQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsResultScreen
@@ -33,7 +34,6 @@ fun AidpiNavHost(
                 onComplaintClick = { complaint ->
                     if (complaint == ComplaintType.COUGH) {
                         assessmentViewModel.resetAssessment()
-
                         navController.navigate(
                             Screen.CoughAssessment.route
                         )
@@ -94,8 +94,23 @@ fun AidpiNavHost(
                         navController.navigate(
                             Screen.RespiratorySignsResult.route
                         )
+                    } else {
+                        navController.navigate(
+                            Screen.ChildAgeQuestion.route
+                        )
                     }
-                    // Resposta Não: aguardando a Pergunta 4.
+                }
+            )
+        }
+
+        composable(Screen.ChildAgeQuestion.route) {
+            ChildAgeQuestionScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onAgeSelected = { _ ->
+                    // A próxima etapa será conectada
+                    // quando definirmos a Pergunta 5.
                 }
             )
         }
@@ -107,7 +122,6 @@ fun AidpiNavHost(
                 },
                 onNewAssessment = {
                     assessmentViewModel.resetAssessment()
-
                     navController.popBackStack(
                         route = Screen.Home.route,
                         inclusive = false
@@ -123,7 +137,6 @@ fun AidpiNavHost(
                 },
                 onNewAssessment = {
                     assessmentViewModel.resetAssessment()
-
                     navController.popBackStack(
                         route = Screen.Home.route,
                         inclusive = false
@@ -139,7 +152,6 @@ fun AidpiNavHost(
                 },
                 onNewAssessment = {
                     assessmentViewModel.resetAssessment()
-
                     navController.popBackStack(
                         route = Screen.Home.route,
                         inclusive = false

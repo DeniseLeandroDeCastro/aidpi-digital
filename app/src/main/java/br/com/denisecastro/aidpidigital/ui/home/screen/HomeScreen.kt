@@ -28,7 +28,6 @@ fun HomeScreen(
     onComplaintClick: (ComplaintType) -> Unit = {}
 ) {
     val complaints = ComplaintType.entries.toList()
-
     Column(
         modifier = modifier
             .fillMaxSize()

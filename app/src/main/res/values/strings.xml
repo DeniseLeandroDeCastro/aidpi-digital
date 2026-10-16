@@ -118,6 +118,18 @@
     <string name="respiratory_result_alert_4">• Gemência</string>
     <string name="respiratory_result_alert_5">• Batimento de asa nasal</string>
 
-    <string name="respiratory_result_note_description">Tiragem subcostal = retração da parede torácica inferior durante inspiração. Estridor em repouso indica obstrução grave de vias aéreas.</string>
+    <string name="respiratory_result_note_description">
+        Tiragem subcostal = retração da parede torácica inferior durante inspiração.
+        Estridor em repouso indica obstrução grave de vias aéreas.
+    </string>
+
+    <!-- Pergunta 4: Idade da criança -->
+
+    <string name="child_age_question">Qual a idade da criança?</string>
+    <string name="child_age_guidance">Necessário para avaliar frequência respiratória</string>
+    <string name="child_age_under_12_months">Menor de 12 meses</string>
+    <string name="child_age_1_to_5_years">1 a 5 anos</string>
+    <string name="child_age_infant_icon">1</string>
+    <string name="child_age_child_icon">5</string>
 
 </resources>

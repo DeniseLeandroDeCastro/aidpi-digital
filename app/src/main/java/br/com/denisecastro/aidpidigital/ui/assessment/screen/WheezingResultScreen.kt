@@ -91,14 +91,14 @@ private fun WheezingWarningCard() {
         ) {
             Text(
                 text = stringResource(R.string.wheezing_result_warning_title),
-                color = Color.White,
+                color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.titleSmall
             )
 
             Text(
                 text = stringResource(R.string.wheezing_result_warning_description),
-                color = Color.White,
+                color = Color.Black,
                 style = MaterialTheme.typography.bodyMedium
             )
         }
@@ -199,13 +199,13 @@ private fun WheezingClinicalNoteCard() {
         ) {
             Text(
                 text = stringResource(R.string.wheezing_result_note_title),
-                color = Color.White,
+                color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.titleSmall
             )
             Text(
                 text = stringResource(R.string.wheezing_result_note_description),
-                color = Color.White,
+                color = Color.Black,
                 style = MaterialTheme.typography.bodyMedium
             )
         }

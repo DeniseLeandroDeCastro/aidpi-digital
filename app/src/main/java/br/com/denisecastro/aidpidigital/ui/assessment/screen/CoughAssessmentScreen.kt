@@ -29,16 +29,12 @@ fun CoughAssessmentScreen(
             .background(AssessmentHeaderBackground)
     ) {
         AssessmentHeader(onBack = onBack)
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .background(AssessmentBackground)
         ) {
-            AssessmentBackgroundWaves(
-                modifier = Modifier.fillMaxSize()
-            )
-
+            AssessmentBackgroundWaves(modifier = Modifier.fillMaxSize())
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -51,35 +47,22 @@ fun CoughAssessmentScreen(
                     )
             ) {
                 AssessmentQuestionContent()
-
                 Spacer(Modifier.height(14.dp))
-
                 Column(
-                    modifier = Modifier.offset(y = (-30).dp)
+                    modifier = Modifier.offset(y = (-50).dp)
                 ) {
                     AssessmentAnswerCard(
-                        text = stringResource(
-                            R.string.assessment_answer_yes
-                        ),
-                        icon = stringResource(
-                            R.string.assessment_danger_symbol
-                        ),
+                        text = stringResource(R.string.assessment_answer_yes),
+                        icon = stringResource(R.string.assessment_danger_symbol),
                         iconColor = AssessmentDangerIcon,
                         iconBackground = AssessmentDangerBackground,
-                        onClick = {
-                            onAnswerSelected(true)
-                        }
+                        onClick = { onAnswerSelected(true) }
                     )
 
                     Spacer(Modifier.height(14.dp))
-
                     AssessmentAnswerCard(
-                        text = stringResource(
-                            R.string.assessment_answer_no
-                        ),
-                        icon = stringResource(
-                            R.string.assessment_success_symbol
-                        ),
+                        text = stringResource(R.string.assessment_answer_no),
+                        icon = stringResource(R.string.assessment_success_symbol),
                         iconColor = AssessmentSuccessIcon,
                         iconBackground = AssessmentSuccessBackground,
                         onClick = {
@@ -92,11 +75,7 @@ fun CoughAssessmentScreen(
     }
 }
 
-@Preview(
-    showSystemUi = true,
-    widthDp = 390,
-    heightDp = 844
-)
+@Preview(showSystemUi = true)
 @Composable
 private fun CoughAssessmentScreenPreview() {
     AidpiDigitalTheme {
