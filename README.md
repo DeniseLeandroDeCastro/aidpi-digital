@@ -321,11 +321,6 @@ Neste projeto, tenho trabalhado especialmente com:
 - Organização e manutenção do código.
 - Construção incremental de funcionalidades.
 
-### Aberta a novas oportunidades
-
-Atualmente, estou em busca de uma nova oportunidade como **Desenvolvedora Android**.Tenho interesse em contribuir com equipes que valorizem qualidade técnica, colaboração, aprendizado contínuo e desenvolvimento de produtos que resolvam problemas reais.
-Se você trabalha com recrutamento ou conhece uma oportunidade compatível com meu perfil, ficarei feliz em conversar.
-
 **Portifólio:** [Denise Castro](https://deniseleandrodecastro.github.io/portifolio-denise/)
 
 **GitHub:** [denisecastro](https://github.com/denisecastro)
