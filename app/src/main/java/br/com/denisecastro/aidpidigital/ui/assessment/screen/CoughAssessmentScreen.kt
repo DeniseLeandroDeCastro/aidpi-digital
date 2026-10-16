@@ -48,9 +48,8 @@ fun CoughAssessmentScreen(
             ) {
                 AssessmentQuestionContent()
                 Spacer(Modifier.height(14.dp))
-                Column(
-                    modifier = Modifier.offset(y = (-50).dp)
-                ) {
+                Column()
+                {
                     AssessmentAnswerCard(
                         text = stringResource(R.string.assessment_answer_yes),
                         icon = stringResource(R.string.assessment_danger_symbol),

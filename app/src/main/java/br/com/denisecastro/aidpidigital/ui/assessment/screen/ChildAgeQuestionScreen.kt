@@ -56,7 +56,7 @@ fun ChildAgeQuestionScreen(
                     )
             ) {
                 ChildAgeQuestionContent()
-                Spacer(Modifier.height(24.dp))
+                Spacer(Modifier.height(74.dp))
 
                 Column {
                     ChildAgeAnswerCard(
@@ -189,7 +189,9 @@ private fun ChildAgeQuestionContent() {
                 )
                 AssessmentChildIllustration(
                     width = illustrationWidth,
-                    modifier = Modifier.align(Alignment.TopEnd)
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .offset(y = 60.dp)
                 )
             }
         }

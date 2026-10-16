@@ -2,7 +2,18 @@ package br.com.denisecastro.aidpidigital.ui.assessment.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -22,7 +33,18 @@ import br.com.denisecastro.aidpidigital.R
 import br.com.denisecastro.aidpidigital.ui.assessment.components.answer.WheezingAssessmentAnswerCard
 import br.com.denisecastro.aidpidigital.ui.assessment.components.background.AssessmentBackgroundWaves
 import br.com.denisecastro.aidpidigital.ui.assessment.components.illustration.AssessmentChildIllustration
-import br.com.denisecastro.aidpidigital.ui.theme.*
+import br.com.denisecastro.aidpidigital.ui.theme.AidpiDigitalTheme
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentBackButtonBackground
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentBackground
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentDangerBackground
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentDangerIcon
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentHeaderBackground
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentNavy
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentProgressBlue
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentProgressTrack
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentSecondary
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentSuccessBackground
+import br.com.denisecastro.aidpidigital.ui.theme.AssessmentSuccessIcon
 
 @Composable
 fun WheezingQuestionScreen(
@@ -57,13 +79,12 @@ fun WheezingQuestionScreen(
                         bottom = 32.dp
                     )
             ) {
+
                 WheezingQuestionContent()
 
                 Spacer(Modifier.height(14.dp))
 
-                Column(
-                    modifier = Modifier.offset(y = (-30).dp)
-                ) {
+                Column {
                     WheezingAssessmentAnswerCard(
                         title = stringResource(R.string.wheezing_answer_yes),
                         description = stringResource(R.string.wheezing_answer_yes_description),
@@ -74,7 +95,6 @@ fun WheezingQuestionScreen(
                             onAnswerSelected(true)
                         }
                     )
-
                     Spacer(Modifier.height(14.dp))
                     WheezingAssessmentAnswerCard(
                         title = stringResource(R.string.wheezing_answer_no),
@@ -138,9 +158,7 @@ private fun WheezingQuestionHeader(
                     fontWeight = FontWeight.Bold,
                     color = AssessmentNavy
                 )
-
                 Spacer(Modifier.height(3.dp))
-
                 Text(
                     text = stringResource(
                         R.string.assessment_progress,
@@ -194,9 +212,7 @@ private fun WheezingQuestionContent() {
                     .height(230.dp)
             ) {
                 Text(
-                    text = stringResource(
-                        R.string.wheezing_guidance
-                    ),
+                    text = stringResource(R.string.wheezing_guidance),
                     modifier = Modifier
                         .align(Alignment.TopStart)
                         .width(descriptionWidth),

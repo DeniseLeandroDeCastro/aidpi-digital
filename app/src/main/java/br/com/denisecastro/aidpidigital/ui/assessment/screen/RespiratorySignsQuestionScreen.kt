@@ -1,6 +1,5 @@
 package br.com.denisecastro.aidpidigital.ui.assessment.screen
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -14,10 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.TransformOrigin
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -26,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import br.com.denisecastro.aidpidigital.R
 import br.com.denisecastro.aidpidigital.ui.assessment.components.answer.AssessmentAnswerCard
 import br.com.denisecastro.aidpidigital.ui.assessment.components.background.AssessmentBackgroundWaves
+import br.com.denisecastro.aidpidigital.ui.assessment.components.illustration.AssessmentChildIllustration
 import br.com.denisecastro.aidpidigital.ui.theme.*
 
 @Composable
@@ -40,6 +36,7 @@ fun RespiratorySignsQuestionScreen(
             .background(AssessmentHeaderBackground)
     ) {
         RespiratorySignsHeader(onBack = onBack)
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -48,6 +45,7 @@ fun RespiratorySignsQuestionScreen(
             AssessmentBackgroundWaves(
                 modifier = Modifier.fillMaxSize()
             )
+
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -61,16 +59,17 @@ fun RespiratorySignsQuestionScreen(
             ) {
                 RespiratorySignsQuestionContent()
                 Spacer(Modifier.height(14.dp))
-                Column(
-                    modifier = Modifier.offset(y = (-0).dp)
-                ) {
+                Column {
                     AssessmentAnswerCard(
                         text = stringResource(R.string.respiratory_signs_answer_yes),
                         icon = stringResource(R.string.assessment_danger_symbol),
                         iconColor = AssessmentDangerIcon,
                         iconBackground = AssessmentDangerBackground,
-                        onClick = { onAnswerSelected(true) }
+                        onClick = {
+                            onAnswerSelected(true)
+                        }
                     )
+
                     Spacer(Modifier.height(14.dp))
 
                     AssessmentAnswerCard(
@@ -114,9 +113,7 @@ private fun RespiratorySignsHeader(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = stringResource(
-                        R.string.assessment_back_symbol
-                    ),
+                    text = stringResource(R.string.assessment_back_symbol),
                     fontSize = 34.sp,
                     lineHeight = 34.sp,
                     color = AssessmentSecondary
@@ -127,9 +124,7 @@ private fun RespiratorySignsHeader(
                 modifier = Modifier.weight(1f)
             ) {
                 Text(
-                    text = stringResource(
-                        R.string.assessment_cough_title
-                    ),
+                    text = stringResource(R.string.assessment_cough_title),
                     fontSize = 18.sp,
                     lineHeight = 22.sp,
                     fontWeight = FontWeight.Bold,
@@ -149,7 +144,9 @@ private fun RespiratorySignsHeader(
                 )
             }
         }
+
         Spacer(Modifier.height(18.dp))
+
         LinearProgressIndicator(
             progress = { 3f / 7f },
             modifier = Modifier
@@ -169,6 +166,7 @@ private fun RespiratorySignsQuestionContent() {
         modifier = Modifier.fillMaxWidth()
     ) {
         val illustrationWidth = maxWidth * 0.46f
+
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -180,33 +178,16 @@ private fun RespiratorySignsQuestionContent() {
                 fontWeight = FontWeight.ExtraBold,
                 color = AssessmentNavy
             )
+
             Spacer(Modifier.height(18.dp))
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(230.dp)
             ) {
-                Image(
-                    painter = painterResource(R.drawable.assessment_child),
-                    contentDescription = stringResource(
-                        R.string.assessment_child_description),
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .width(illustrationWidth)
-                        .height(260.dp)
-                        .graphicsLayer {
-                            scaleX = 1.12f
-                            scaleY = 1.12f
-                            transformOrigin = TransformOrigin(
-                                pivotFractionX = 1f,
-                                pivotFractionY = 0f
-                            )
-                        }
-                        .offset(
-                            x = 14.dp,
-                            y = (-50).dp
-                        )
+                AssessmentChildIllustration(
+                    width = illustrationWidth,
+                    modifier = Modifier.align(Alignment.TopEnd)
                 )
             }
         }
@@ -223,5 +204,3 @@ private fun RespiratorySignsQuestionScreenPreview() {
         )
     }
 }
-
-
