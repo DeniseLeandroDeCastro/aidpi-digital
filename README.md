@@ -296,7 +296,7 @@ O fluxo é implementado progressivamente, permitindo validar as interfaces e a n
 1. Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO.git
+git clone git@github.com:DeniseLeandroDeCastro/aidpi-digital.git
 ```
 
 2. Abra o projeto no Android Studio.
@@ -326,7 +326,7 @@ Neste projeto, tenho trabalhado especialmente com:
 Atualmente, estou em busca de uma nova oportunidade como **Desenvolvedora Android**.Tenho interesse em contribuir com equipes que valorizem qualidade técnica, colaboração, aprendizado contínuo e desenvolvimento de produtos que resolvam problemas reais.
 Se você trabalha com recrutamento ou conhece uma oportunidade compatível com meu perfil, ficarei feliz em conversar.
 
-**LinkedIn:** [Denise Castro](LINK_DO_LINKEDIN)
+**Portifólio:** [Denise Castro](https://deniseleandrodecastro.github.io/portifolio-denise/)
 
 **GitHub:** [denisecastro](https://github.com/denisecastro)
 
