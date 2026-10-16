@@ -10,6 +10,7 @@ import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.ChildAgeQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateUnder12Screen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.WheezingQuestionScreen
@@ -108,9 +109,13 @@ fun AidpiNavHost(
                 onBack = {
                     navController.popBackStack()
                 },
-                onAgeSelected = { _ ->
-                    // A próxima etapa será conectada
-                    // quando definirmos a Pergunta 5.
+                onAgeSelected = { under12Months ->
+                    if (under12Months) {
+                        navController.navigate(
+                            Screen.RespiratoryRateUnder12.route
+                        )
+                    }
+                    // A opção de 1 a 5 anos terá seu próprio fluxo.
                 }
             )
         }
@@ -156,6 +161,18 @@ fun AidpiNavHost(
                         route = Screen.Home.route,
                         inclusive = false
                     )
+                }
+            )
+        }
+
+        composable(Screen.RespiratoryRateUnder12.route) {
+            RespiratoryRateUnder12Screen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onAnswerSelected = { isRapid ->
+                    // Próxima etapa do fluxograma:
+                    // será conectada quando definirmos o destino.
                 }
             )
         }
