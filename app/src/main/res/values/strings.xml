@@ -132,4 +132,33 @@
     <string name="child_age_infant_icon">1</string>
     <string name="child_age_child_icon">5</string>
 
+
+    <!-- Resultado: Pneumonia -->
+
+    <string name="pneumonia_result_title">PNEUMONIA</string>
+    <string name="pneumonia_result_description">Respiração rápida identificada na avaliação da frequência respiratória.</string>
+
+    <!-- Possíveis diagnósticos -->
+    <string name="pneumonia_diagnosis_1">Pneumonia</string>
+    <string name="pneumonia_diagnosis_2">Broncopneumonia</string>
+
+    <!-- Condutas: conteúdo demonstrativo -->
+    <string name="pneumonia_conduct_1">Encaminhar para avaliação por profissional de saúde habilitado.</string>
+    <string name="pneumonia_conduct_2">Seguir o protocolo clínico vigente para avaliação e tratamento.</string>
+    <string name="pneumonia_conduct_3">Orientar o responsável sobre acompanhamento e sinais de alerta.</string>
+
+    <!-- Sinais vitais -->
+    <string name="pneumonia_vital_rr">Freq. respiratória</string>
+    <string name="pneumonia_vital_temperature">Temperatura</string>
+    <string name="pneumonia_vital_pattern">Padrão respiratório</string>
+
+    <!-- Sinais de alerta -->
+    <string name="pneumonia_alert_1">• Agravamento da dificuldade para respirar.</string>
+    <string name="pneumonia_alert_2">• Incapacidade de beber ou se alimentar.</string>
+    <string name="pneumonia_alert_3">• Alteração importante do estado geral.</string>
+
+    <!-- Nota clínica -->
+    <string name="pneumonia_clinical_note">A classificação apresentada corresponde ao caminho selecionado no fluxograma acadêmico. A interpretação clínica deve considerar a avaliação profissional e o protocolo aplicável.</string>
+
+
 </resources>

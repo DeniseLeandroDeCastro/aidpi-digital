@@ -17,19 +17,19 @@ import br.com.denisecastro.aidpidigital.R
 import br.com.denisecastro.aidpidigital.ui.theme.*
 
 @Composable
-fun ResultConductCard() {
+fun ResultConductCard(
+    conducts: List<String> = listOf(
+        stringResource(R.string.result_conduct_1),
+        stringResource(R.string.result_conduct_2),
+        stringResource(R.string.result_conduct_3),
+        stringResource(R.string.result_conduct_4),
+        stringResource(R.string.result_conduct_5),
+        stringResource(R.string.result_conduct_6)
+    )
+) {
     ResultSectionCard(
         title = stringResource(R.string.result_conduct_title)
     ) {
-        val conducts = listOf(
-            R.string.result_conduct_1,
-            R.string.result_conduct_2,
-            R.string.result_conduct_3,
-            R.string.result_conduct_4,
-            R.string.result_conduct_5,
-            R.string.result_conduct_6
-        )
-
         conducts.forEachIndexed { index, conduct ->
             Row(
                 modifier = Modifier
@@ -55,7 +55,7 @@ fun ResultConductCard() {
                 Spacer(Modifier.width(10.dp))
 
                 Text(
-                    text = stringResource(conduct),
+                    text = conduct,
                     modifier = Modifier.weight(1f),
                     color = ResultText,
                     fontSize = 12.sp,
@@ -73,5 +73,3 @@ private fun ResultConductCardPreview() {
         ResultConductCard()
     }
 }
-
-

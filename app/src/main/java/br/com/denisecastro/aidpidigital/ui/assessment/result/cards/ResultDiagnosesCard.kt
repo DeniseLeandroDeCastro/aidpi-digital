@@ -16,17 +16,17 @@ import br.com.denisecastro.aidpidigital.R
 import br.com.denisecastro.aidpidigital.ui.theme.*
 
 @Composable
-fun ResultDiagnosesCard() {
+fun ResultDiagnosesCard(
+    diagnoses: List<String> = listOf(
+        stringResource(R.string.result_diagnosis_1),
+        stringResource(R.string.result_diagnosis_2),
+        stringResource(R.string.result_diagnosis_3),
+        stringResource(R.string.result_diagnosis_4)
+    )
+) {
     ResultSectionCard(
         title = stringResource(R.string.result_diagnoses_title)
     ) {
-        val diagnoses = listOf(
-            R.string.result_diagnosis_1,
-            R.string.result_diagnosis_2,
-            R.string.result_diagnosis_3,
-            R.string.result_diagnosis_4
-        )
-
         diagnoses.forEach { diagnosis ->
             Row(
                 modifier = Modifier.padding(vertical = 3.dp),
@@ -43,7 +43,7 @@ fun ResultDiagnosesCard() {
                 Spacer(Modifier.width(7.dp))
 
                 Text(
-                    text = stringResource(diagnosis),
+                    text = diagnosis,
                     color = ResultText,
                     fontSize = 12.sp,
                     lineHeight = 17.sp
@@ -60,5 +60,3 @@ private fun ResultDiagnosesCardPreview() {
         ResultDiagnosesCard()
     }
 }
-
-

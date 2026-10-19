@@ -36,7 +36,6 @@ fun AssessmentResultScreen(
             .background(ResultBackground)
     ) {
         ResultHeader(onBack = onBack)
-
         Column(
             modifier = Modifier
                 .weight(1f)

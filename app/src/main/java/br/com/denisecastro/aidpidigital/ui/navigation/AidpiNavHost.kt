@@ -10,6 +10,7 @@ import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.ChildAgeQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.PneumoniaResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateFrom1To5Screen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateUnder12Screen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratorySignsQuestionScreen
@@ -175,8 +176,13 @@ fun AidpiNavHost(
                     navController.popBackStack()
                 },
                 onAnswerSelected = { isRapid ->
-                    // Próxima etapa do fluxograma:
-                    // será conectada quando definirmos o destino.
+                    if (isRapid) {
+                        navController.navigate(
+                            Screen.PneumoniaResult.route
+                        )
+                    }
+                    // A alternativa de frequência inferior a 50
+                    // será conectada ao próximo destino do fluxograma.
                 }
             )
         }
@@ -189,6 +195,22 @@ fun AidpiNavHost(
                 onAnswerSelected = { isRapid ->
                     // A próxima etapa será conectada
                     // quando tivermos a tela seguinte.
+                }
+            )
+        }
+
+        composable(Screen.PneumoniaResult.route) {
+            PneumoniaResultScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNewAssessment = {
+                    navController.navigate(Screen.Home.route) {
+                        popUpTo(Screen.Home.route) {
+                            inclusive = false
+                        }
+                        launchSingleTop = true
+                    }
                 }
             )
         }
