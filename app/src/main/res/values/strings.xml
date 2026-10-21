@@ -169,4 +169,31 @@
     <string name="cough_duration_14_or_more">14 dias ou mais</string>
 
 
+    <!-- Resultado: Não é pneumonia -->
+    <string name="not_pneumonia_title">NÃO É PNEUMONIA</string>
+    <string name="not_pneumonia_description">Tosse ou resfriado comum. Tratamento sintomático em casa.</string>
+
+    <!-- Possíveis diagnósticos -->
+    <string name="not_pneumonia_diagnosis_1">Resfriado Comum</string>
+    <string name="not_pneumonia_diagnosis_2">Tosse Viral</string>
+    <string name="not_pneumonia_diagnosis_3">Infecção de Vias Aéreas Superiores</string>
+
+    <!-- Condutas recomendadas -->
+    <string name="not_pneumonia_conduct_1">Medidas caseiras para aliviar tosse e dor de garganta</string>
+    <string name="not_pneumonia_conduct_2">Oferecer líquidos adequadamente</string>
+    <string name="not_pneumonia_conduct_3">Manter alimentação habitual conforme tolerância</string>
+    <string name="not_pneumonia_conduct_4">Realizar higiene nasal quando necessário</string>
+    <string name="not_pneumonia_conduct_5">Orientar o responsável sobre sinais de alerta</string>
+    <string name="not_pneumonia_conduct_6">Buscar reavaliação se houver piora ou persistência dos sintomas</string>
+    <string name="not_pneumonia_conduct_7">Não utilizar antibióticos sem indicação profissional</string>
+
+    <!-- Sinais de alerta -->
+    <string name="not_pneumonia_alert_1">• Respiração rápida</string>
+    <string name="not_pneumonia_alert_2">• Dificuldade para respirar</string>
+    <string name="not_pneumonia_alert_3">• Tiragem</string>
+    <string name="not_pneumonia_alert_4">• Febre persistente</string>
+    <string name="not_pneumonia_alert_5">• Piora do estado geral</string>
+
+    <!-- Nota clínica -->
+    <string name="not_pneumonia_clinical_note">Orientar retorno imediato se aparecer respiração rápida, dificuldade para respirar ou incapacidade de beber.</string>
 </resources>

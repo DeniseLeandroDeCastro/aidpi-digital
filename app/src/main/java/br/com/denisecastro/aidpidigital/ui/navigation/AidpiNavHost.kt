@@ -11,6 +11,7 @@ import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScr
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.ChildAgeQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughDurationQuestionScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.NotPneumoniaResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.PneumoniaResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateFrom1To5Screen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateUnder12Screen
@@ -215,14 +216,36 @@ fun AidpiNavHost(
             )
         }
 
+
         composable(Screen.CoughDurationQuestion.route) {
             CoughDurationQuestionScreen(
                 onBack = {
                     navController.popBackStack()
                 },
                 onAnswerSelected = { is14DaysOrMore ->
-                    // Os dois resultados serão conectados
-                    // conforme as próximas telas do fluxograma.
+                    if (!is14DaysOrMore) {
+                        navController.navigate(
+                            Screen.NotPneumoniaResult.route
+                        )
+                    }
+                    // O destino de "14 dias ou mais"
+                    // será implementado na próxima etapa.
+                }
+            )
+        }
+
+        composable(Screen.NotPneumoniaResult.route) {
+            NotPneumoniaResultScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNewAssessment = {
+                    navController.navigate(Screen.Home.route) {
+                        popUpTo(Screen.Home.route) {
+                            inclusive = false
+                        }
+                        launchSingleTop = true
+                    }
                 }
             )
         }

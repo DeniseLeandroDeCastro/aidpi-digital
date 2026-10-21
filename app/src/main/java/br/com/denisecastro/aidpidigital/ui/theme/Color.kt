@@ -139,4 +139,7 @@ val WheezingBackground = Color(0xFFF2F7FF)
 val WheezingCardBorder = Color(0xFFE0E5EC)
 val WheezingProgressTrack = Color(0xFFE1E5EB)
 val WheezingArrow = Color(0xFF94A3B8)
+val ResultSuccessBackground = Color(0xFFECFDF3)
+val ResultSuccessBorder = Color(0xFFAAF0C2)
+val ResultSuccessText = Color(0xFF087443)
 
