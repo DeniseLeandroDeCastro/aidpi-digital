@@ -142,4 +142,7 @@ val WheezingArrow = Color(0xFF94A3B8)
 val ResultSuccessBackground = Color(0xFFECFDF3)
 val ResultSuccessBorder = Color(0xFFAAF0C2)
 val ResultSuccessText = Color(0xFF087443)
+val ResultWarningBackground = Color(0xFFFFF3C4)
+val ResultWarningBorder = Color(0xFFF2C94C)
+val ResultWarningText = Color(0xFF263238)
 

@@ -196,4 +196,34 @@
 
     <!-- Nota clínica -->
     <string name="not_pneumonia_clinical_note">Orientar retorno imediato se aparecer respiração rápida, dificuldade para respirar ou incapacidade de beber.</string>
+
+
+    <!-- Resultado: Tosse crônica -->
+    <string name="chronic_cough_title">TOSSE CRÔNICA - Investigar</string>
+    <string name="chronic_cough_description">Tosse há 14 dias ou mais. Necessita investigação adicional.</string>
+
+    <!-- Possíveis diagnósticos -->
+    <string name="chronic_cough_diagnosis_1">Tuberculose</string>
+    <string name="chronic_cough_diagnosis_2">Asma</string>
+    <string name="chronic_cough_diagnosis_3">Coqueluche</string>
+    <string name="chronic_cough_diagnosis_4">Corpo estranho</string>
+    <string name="chronic_cough_diagnosis_5">Rinite/Sinusite crônica</string>
+
+    <!-- Condutas recomendadas -->
+    <string name="chronic_cough_conduct_1">Investigar contato com tuberculose</string>
+    <string name="chronic_cough_conduct_2">Avaliar calendário vacinal (coqueluche)</string>
+    <string name="chronic_cough_conduct_3">Investigar história de engasgo (corpo estranho)</string>
+    <string name="chronic_cough_conduct_4">Verificar sintomas de asma (chiado recorrente, tosse noturna)</string>
+    <string name="chronic_cough_conduct_5">REFERIR para investigação diagnóstica</string>
+    <string name="chronic_cough_conduct_6">Considerar RX tórax</string>
+    <string name="chronic_cough_conduct_7">Considerar teste tuberculínico se contato TB</string>
+
+    <!-- Sinais vitais -->
+    <string name="chronic_cough_vital_weight">Peso (avaliar perda ponderal)</string>
+    <string name="chronic_cough_vital_rr">FR</string>
+    <string name="chronic_cough_vital_temperature">Temperatura</string>
+
+    <!-- Nota clínica -->
+    <string name="chronic_cough_clinical_note">Tosse persistente por 14 dias ou mais requer investigação. Tuberculose deve ser considerada na avaliação clínica.</string>
+
 </resources>
