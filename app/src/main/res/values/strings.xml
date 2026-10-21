@@ -160,5 +160,13 @@
     <!-- Nota clínica -->
     <string name="pneumonia_clinical_note">A classificação apresentada corresponde ao caminho selecionado no fluxograma acadêmico. A interpretação clínica deve considerar a avaliação profissional e o protocolo aplicável.</string>
 
+    <!-- Pergunta 7: duração da tosse -->
+    <string name="cough_duration_back">Voltar</string>
+    <string name="cough_duration_header">Tosse ou Dificuldade para Respirar</string>
+    <string name="cough_duration_progress">Pergunta 7 de 7</string>
+    <string name="cough_duration_question">Há quanto tempo a criança está com tosse?</string>
+    <string name="cough_duration_less_14">Menos de 14 dias</string>
+    <string name="cough_duration_14_or_more">14 dias ou mais</string>
+
 
 </resources>

@@ -10,6 +10,7 @@ import br.com.denisecastro.aidpidigital.domain.model.ComplaintType
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.AssessmentResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.ChildAgeQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughAssessmentScreen
+import br.com.denisecastro.aidpidigital.ui.assessment.screen.CoughDurationQuestionScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.PneumoniaResultScreen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateFrom1To5Screen
 import br.com.denisecastro.aidpidigital.ui.assessment.screen.RespiratoryRateUnder12Screen
@@ -170,6 +171,7 @@ fun AidpiNavHost(
             )
         }
 
+
         composable(Screen.RespiratoryRateUnder12.route) {
             RespiratoryRateUnder12Screen(
                 onBack = {
@@ -177,12 +179,10 @@ fun AidpiNavHost(
                 },
                 onAnswerSelected = { isRapid ->
                     if (isRapid) {
-                        navController.navigate(
-                            Screen.PneumoniaResult.route
-                        )
+                        navController.navigate(Screen.PneumoniaResult.route)
+                    } else {
+                        navController.navigate(Screen.CoughDurationQuestion.route)
                     }
-                    // A alternativa de frequência inferior a 50
-                    // será conectada ao próximo destino do fluxograma.
                 }
             )
         }
@@ -214,5 +214,18 @@ fun AidpiNavHost(
                 }
             )
         }
+
+        composable(Screen.CoughDurationQuestion.route) {
+            CoughDurationQuestionScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onAnswerSelected = { is14DaysOrMore ->
+                    // Os dois resultados serão conectados
+                    // conforme as próximas telas do fluxograma.
+                }
+            )
+        }
+
     }
 }
